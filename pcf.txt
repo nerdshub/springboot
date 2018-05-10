@@ -1,0 +1,30 @@
+create service
+==> cf create-service cleardb spark capdb 
+
+bind service 
+==> cf bind-service spring-music--18378 capdb
+
+restage whenever bind a service after creation
+==> cf restage spring-music--18378
+
+view all apps
+==> cf apps
+
+
+Log reports
+==> cf logs <<appname>>
+==> cf logs <<appname>> --recent
+
+Application events
+==> cf events <<appname>>
+
+
+manifest.yml file
+and ENV variables setup. Custom variables setup using cli.
+
+==> cf buildpacks
+
+https://github.com/cloudfoundry/java-buildpack
+
+
+
